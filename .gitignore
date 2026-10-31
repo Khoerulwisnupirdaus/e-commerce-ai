@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Local data & secrets
+store_vault.json
+sessions/
+*.env
+.env
+
+# Temporary scratch scripts & screenshots
+scratch/
+screenshots/
+*.png
+*.jpg

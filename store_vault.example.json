@@ -1,0 +1,13 @@
+{
+  "toko_001": {
+    "id": "toko_001",
+    "name": "Toko Demo Utama",
+    "phone": "081200000000",
+    "platform": "shopee",
+    "proxy": null,
+    "status": "NOT_LOGGED_IN",
+    "created_at": "2026-10-21 00:00:00",
+    "last_login": null,
+    "active_tab_id": null
+  }
+}

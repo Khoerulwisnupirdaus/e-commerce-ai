@@ -1,0 +1,25 @@
+{
+  "camofox": {
+    "server_url": "http://localhost:9377",
+    "server_dir": "C:\\Users\\Hype G12\\Downloads\\camofox-browser",
+    "user_id": "business_agent",
+    "session_key": "marketplace_session"
+  },
+  "platforms": {
+    "shopee": {
+      "base_url": "https://shopee.co.id",
+      "login_url": "https://shopee.co.id/buyer/login",
+      "search_url": "https://shopee.co.id/search?keyword="
+    },
+    "tokopedia": {
+      "base_url": "https://www.tokopedia.com",
+      "login_url": "https://www.tokopedia.com/login",
+      "search_url": "https://www.tokopedia.com/search?q="
+    },
+    "gojek": {
+      "base_url": "https://gofood.co.id",
+      "login_url": "https://gofood.co.id/login"
+    }
+  },
+  "sessions_dir": "sessions"
+}
