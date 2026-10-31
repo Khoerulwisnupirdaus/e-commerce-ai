@@ -1,0 +1,1184 @@
+from typing import Dict, List, Optional
+
+# Katalog 125+ Platform E-Commerce, Marketplace & Omnichannel (Indonesia & Global)
+PLATFORM_REGISTRY: Dict[str, Dict[str, str]] = {
+    # =========================================================================
+    # 1. INDONESIA MARKETPLACES & QUICK COMMERCE (30 Platform)
+    # =========================================================================
+    "shopee_id": {
+        "name": "Shopee Indonesia",
+        "region": "Indonesia",
+        "category": "Marketplace",
+        "base_url": "https://shopee.co.id",
+        "seller_url": "https://seller.shopee.co.id",
+        "login_url": "https://shopee.co.id/buyer/login",
+        "search_url": "https://shopee.co.id/search?keyword="
+    },
+    "tokopedia": {
+        "name": "Tokopedia",
+        "region": "Indonesia",
+        "category": "Marketplace",
+        "base_url": "https://www.tokopedia.com",
+        "seller_url": "https://seller.tokopedia.com",
+        "login_url": "https://www.tokopedia.com/login",
+        "search_url": "https://www.tokopedia.com/search?q="
+    },
+    "tiktok_shop_id": {
+        "name": "TikTok Shop Indonesia",
+        "region": "Indonesia",
+        "category": "Social Commerce",
+        "base_url": "https://shop-id.tiktok.com",
+        "seller_url": "https://seller-id.tiktok.com",
+        "login_url": "https://seller-id.tiktok.com/account/login",
+        "search_url": "https://www.tiktok.com/search?q="
+    },
+    "lazada_id": {
+        "name": "Lazada Indonesia",
+        "region": "Indonesia",
+        "category": "Marketplace",
+        "base_url": "https://www.lazada.co.id",
+        "seller_url": "https://sellercenter.lazada.co.id",
+        "login_url": "https://member.lazada.co.id/user/login",
+        "search_url": "https://www.lazada.co.id/catalog/?q="
+    },
+    "blibli": {
+        "name": "Blibli",
+        "region": "Indonesia",
+        "category": "Marketplace",
+        "base_url": "https://www.blibli.com",
+        "seller_url": "https://seller.blibli.com",
+        "login_url": "https://www.blibli.com/login",
+        "search_url": "https://www.blibli.com/cari/"
+    },
+    "bukalapak": {
+        "name": "Bukalapak",
+        "region": "Indonesia",
+        "category": "Marketplace",
+        "base_url": "https://www.bukalapak.com",
+        "seller_url": "https://seller.bukalapak.com",
+        "login_url": "https://accounts.bukalapak.com/login",
+        "search_url": "https://www.bukalapak.com/products?search%5Bkeywords%5D="
+    },
+    "zalora_id": {
+        "name": "Zalora Indonesia",
+        "region": "Indonesia",
+        "category": "Fashion",
+        "base_url": "https://www.zalora.co.id",
+        "seller_url": "https://sellercenter.zalora.co.id",
+        "login_url": "https://www.zalora.co.id/customer/account/login/",
+        "search_url": "https://www.zalora.co.id/catalog/?q="
+    },
+    "sociolla": {
+        "name": "Sociolla",
+        "region": "Indonesia",
+        "category": "Beauty & Personal Care",
+        "base_url": "https://www.sociolla.com",
+        "seller_url": "https://www.sociolla.com",
+        "login_url": "https://www.sociolla.com",
+        "search_url": "https://www.sociolla.com/search?q="
+    },
+    "bhinneka": {
+        "name": "Bhinneka",
+        "region": "Indonesia",
+        "category": "B2B & Electronics",
+        "base_url": "https://www.bhinneka.com",
+        "seller_url": "https://merchant.bhinneka.com",
+        "login_url": "https://accounts.bhinneka.com/login",
+        "search_url": "https://www.bhinneka.com/cari?cari="
+    },
+    "jakmall": {
+        "name": "Jakmall",
+        "region": "Indonesia",
+        "category": "Wholesale & Dropship",
+        "base_url": "https://www.jakmall.com",
+        "seller_url": "https://www.jakmall.com/mitra",
+        "login_url": "https://www.jakmall.com/login",
+        "search_url": "https://www.jakmall.com/search?q="
+    },
+    "ralali": {
+        "name": "Ralali B2B",
+        "region": "Indonesia",
+        "category": "B2B Marketplace",
+        "base_url": "https://www.ralali.com",
+        "seller_url": "https://seller.ralali.com",
+        "login_url": "https://www.ralali.com/login",
+        "search_url": "https://www.ralali.com/search?q="
+    },
+    "indotrading": {
+        "name": "Indotrading",
+        "region": "Indonesia",
+        "category": "B2B Directory & Trade",
+        "base_url": "https://www.indotrading.com",
+        "seller_url": "https://member.indotrading.com",
+        "login_url": "https://member.indotrading.com/login",
+        "search_url": "https://www.indotrading.com/search?keyword="
+    },
+    "klikindomaret": {
+        "name": "KlikIndomaret",
+        "region": "Indonesia",
+        "category": "Grocery & Retail",
+        "base_url": "https://www.klikindomaret.com",
+        "seller_url": "https://www.klikindomaret.com",
+        "login_url": "https://www.klikindomaret.com/login",
+        "search_url": "https://www.klikindomaret.com/search/?key="
+    },
+    "alfagift": {
+        "name": "Alfagift",
+        "region": "Indonesia",
+        "category": "Grocery & Retail",
+        "base_url": "https://alfagift.id",
+        "seller_url": "https://alfagift.id",
+        "login_url": "https://alfagift.id/login",
+        "search_url": "https://alfagift.id/find/"
+    },
+    "gofood_gobiz": {
+        "name": "GoBiz / GoFood & GoMart",
+        "region": "Indonesia",
+        "category": "On-Demand & Food",
+        "base_url": "https://gobiz.co.id",
+        "seller_url": "https://portal.gofoodmerchant.co.id",
+        "login_url": "https://portal.gofoodmerchant.co.id/auth/login",
+        "search_url": "https://gofood.co.id/search?q="
+    },
+    "grabmerchant": {
+        "name": "GrabMerchant (GrabFood & GrabMart)",
+        "region": "Indonesia",
+        "category": "On-Demand & Food",
+        "base_url": "https://merchant.grab.com",
+        "seller_url": "https://merchant.grab.com/portal",
+        "login_url": "https://merchant.grab.com/portal",
+        "search_url": "https://food.grab.com/id/id/"
+    },
+    "ruparupa": {
+        "name": "Ruparupa",
+        "region": "Indonesia",
+        "category": "Home & Living",
+        "base_url": "https://www.ruparupa.com",
+        "seller_url": "https://www.ruparupa.com",
+        "login_url": "https://www.ruparupa.com/login",
+        "search_url": "https://www.ruparupa.com/jual/"
+    },
+    "dekoruma": {
+        "name": "Dekoruma",
+        "region": "Indonesia",
+        "category": "Furniture & Home",
+        "base_url": "https://www.dekoruma.com",
+        "seller_url": "https://www.dekoruma.com",
+        "login_url": "https://www.dekoruma.com/login",
+        "search_url": "https://www.dekoruma.com/search?query="
+    },
+    "matahari": {
+        "name": "Matahari.com",
+        "region": "Indonesia",
+        "category": "Department Store",
+        "base_url": "https://www.matahari.com",
+        "seller_url": "https://www.matahari.com",
+        "login_url": "https://www.matahari.com/customer/account/login",
+        "search_url": "https://www.matahari.com/catalogsearch/result/?q="
+    },
+    "eraspace": {
+        "name": "Eraspace (Erajaya)",
+        "region": "Indonesia",
+        "category": "Gadgets & Electronics",
+        "base_url": "https://eraspace.com",
+        "seller_url": "https://eraspace.com",
+        "login_url": "https://eraspace.com/login",
+        "search_url": "https://eraspace.com/search?q="
+    },
+    "ibox_id": {
+        "name": "iBox Indonesia",
+        "region": "Indonesia",
+        "category": "Apple Authorized Retail",
+        "base_url": "https://ibox.co.id",
+        "seller_url": "https://ibox.co.id",
+        "login_url": "https://ibox.co.id/login",
+        "search_url": "https://ibox.co.id/search?q="
+    },
+    "digimap": {
+        "name": "Digimap Indonesia",
+        "region": "Indonesia",
+        "category": "Electronics",
+        "base_url": "https://www.digimap.co.id",
+        "seller_url": "https://www.digimap.co.id",
+        "login_url": "https://www.digimap.co.id/account/login",
+        "search_url": "https://www.digimap.co.id/search?q="
+    },
+    "gramedia": {
+        "name": "Gramedia.com",
+        "region": "Indonesia",
+        "category": "Books & Stationery",
+        "base_url": "https://www.gramedia.com",
+        "seller_url": "https://mitra.gramedia.com",
+        "login_url": "https://www.gramedia.com/login",
+        "search_url": "https://www.gramedia.com/search?q="
+    },
+    "periplus": {
+        "name": "Periplus",
+        "region": "Indonesia",
+        "category": "Imported Books",
+        "base_url": "https://www.periplus.com",
+        "seller_url": "https://www.periplus.com",
+        "login_url": "https://www.periplus.com/account/login",
+        "search_url": "https://www.periplus.com/index.php?route=product/search&search="
+    },
+    "sayurbox": {
+        "name": "Sayurbox",
+        "region": "Indonesia",
+        "category": "Fresh Grocery",
+        "base_url": "https://www.sayurbox.com",
+        "seller_url": "https://www.sayurbox.com",
+        "login_url": "https://www.sayurbox.com/login",
+        "search_url": "https://www.sayurbox.com/search?q="
+    },
+    "segari": {
+        "name": "Segari",
+        "region": "Indonesia",
+        "category": "Fresh Grocery",
+        "base_url": "https://segari.id",
+        "seller_url": "https://segari.id",
+        "login_url": "https://segari.id/login",
+        "search_url": "https://segari.id/search?q="
+    },
+    "astro_id": {
+        "name": "Astro Quick Commerce",
+        "region": "Indonesia",
+        "category": "Quick Commerce",
+        "base_url": "https://www.astronauts.id",
+        "seller_url": "https://www.astronauts.id",
+        "login_url": "https://www.astronauts.id",
+        "search_url": "https://www.astronauts.id"
+    },
+    "datascripmall": {
+        "name": "DatascripMall.ID",
+        "region": "Indonesia",
+        "category": "Office & IT Supplies",
+        "base_url": "https://datascripmall.id",
+        "seller_url": "https://seller.datascripmall.id",
+        "login_url": "https://datascripmall.id/login",
+        "search_url": "https://datascripmall.id/search?q="
+    },
+    "pawoon": {
+        "name": "Pawoon POS & Store",
+        "region": "Indonesia",
+        "category": "POS & Retail",
+        "base_url": "https://www.pawoon.com",
+        "seller_url": "https://my.pawoon.com",
+        "login_url": "https://my.pawoon.com/login",
+        "search_url": "https://www.pawoon.com"
+    },
+    "majoo": {
+        "name": "Majoo Indonesia",
+        "region": "Indonesia",
+        "category": "POS & Omnichannel",
+        "base_url": "https://majoo.id",
+        "seller_url": "https://wirausaha.majoo.id",
+        "login_url": "https://wirausaha.majoo.id/login",
+        "search_url": "https://majoo.id"
+    },
+
+    # =========================================================================
+    # 2. SOUTHEAST ASIA & EAST ASIA MARKETPLACES (35 Platform)
+    # =========================================================================
+    "shopee_sg": {
+        "name": "Shopee Singapore",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://shopee.sg",
+        "seller_url": "https://seller.shopee.sg",
+        "login_url": "https://shopee.sg/buyer/login",
+        "search_url": "https://shopee.sg/search?keyword="
+    },
+    "shopee_my": {
+        "name": "Shopee Malaysia",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://shopee.com.my",
+        "seller_url": "https://seller.shopee.com.my",
+        "login_url": "https://shopee.com.my/buyer/login",
+        "search_url": "https://shopee.com.my/search?keyword="
+    },
+    "shopee_th": {
+        "name": "Shopee Thailand",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://shopee.co.th",
+        "seller_url": "https://seller.shopee.co.th",
+        "login_url": "https://shopee.co.th/buyer/login",
+        "search_url": "https://shopee.co.th/search?keyword="
+    },
+    "shopee_ph": {
+        "name": "Shopee Philippines",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://shopee.ph",
+        "seller_url": "https://seller.shopee.ph",
+        "login_url": "https://shopee.ph/buyer/login",
+        "search_url": "https://shopee.ph/search?keyword="
+    },
+    "shopee_vn": {
+        "name": "Shopee Vietnam",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://shopee.vn",
+        "seller_url": "https://banhang.shopee.vn",
+        "login_url": "https://shopee.vn/buyer/login",
+        "search_url": "https://shopee.vn/search?keyword="
+    },
+    "shopee_tw": {
+        "name": "Shopee Taiwan",
+        "region": "East Asia",
+        "category": "Marketplace",
+        "base_url": "https://shopee.tw",
+        "seller_url": "https://seller.shopee.tw",
+        "login_url": "https://shopee.tw/buyer/login",
+        "search_url": "https://shopee.tw/search?keyword="
+    },
+    "lazada_sg": {
+        "name": "Lazada Singapore",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://www.lazada.sg",
+        "seller_url": "https://sellercenter.lazada.sg",
+        "login_url": "https://member.lazada.sg/user/login",
+        "search_url": "https://www.lazada.sg/catalog/?q="
+    },
+    "lazada_my": {
+        "name": "Lazada Malaysia",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://www.lazada.com.my",
+        "seller_url": "https://sellercenter.lazada.com.my",
+        "login_url": "https://member.lazada.com.my/user/login",
+        "search_url": "https://www.lazada.com.my/catalog/?q="
+    },
+    "lazada_th": {
+        "name": "Lazada Thailand",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://www.lazada.co.th",
+        "seller_url": "https://sellercenter.lazada.co.th",
+        "login_url": "https://member.lazada.co.th/user/login",
+        "search_url": "https://www.lazada.co.th/catalog/?q="
+    },
+    "lazada_ph": {
+        "name": "Lazada Philippines",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://www.lazada.com.ph",
+        "seller_url": "https://sellercenter.lazada.com.ph",
+        "login_url": "https://member.lazada.com.ph/user/login",
+        "search_url": "https://www.lazada.com.ph/catalog/?q="
+    },
+    "lazada_vn": {
+        "name": "Lazada Vietnam",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://www.lazada.vn",
+        "seller_url": "https://sellercenter.lazada.vn",
+        "login_url": "https://member.lazada.vn/user/login",
+        "search_url": "https://www.lazada.vn/catalog/?q="
+    },
+    "carousell_sg": {
+        "name": "Carousell Singapore",
+        "region": "Southeast Asia",
+        "category": "Recommerce & Classifieds",
+        "base_url": "https://www.carousell.sg",
+        "seller_url": "https://www.carousell.sg/sell",
+        "login_url": "https://www.carousell.sg/login",
+        "search_url": "https://www.carousell.sg/search/"
+    },
+    "carousell_my": {
+        "name": "Carousell Malaysia",
+        "region": "Southeast Asia",
+        "category": "Recommerce & Classifieds",
+        "base_url": "https://www.carousell.com.my",
+        "seller_url": "https://www.carousell.com.my/sell",
+        "login_url": "https://www.carousell.com.my/login",
+        "search_url": "https://www.carousell.com.my/search/"
+    },
+    "qoo10_sg": {
+        "name": "Qoo10 Singapore",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://www.qoo10.sg",
+        "seller_url": "https://qsm.qoo10.sg",
+        "login_url": "https://my.qoo10.sg/gmkt.inc/Login/Login.aspx",
+        "search_url": "https://www.qoo10.sg/s/?keyword="
+    },
+    "zalora_sg": {
+        "name": "Zalora Singapore",
+        "region": "Southeast Asia",
+        "category": "Fashion",
+        "base_url": "https://www.zalora.sg",
+        "seller_url": "https://sellercenter.zalora.sg",
+        "login_url": "https://www.zalora.sg/customer/account/login/",
+        "search_url": "https://www.zalora.sg/catalog/?q="
+    },
+    "zalora_my": {
+        "name": "Zalora Malaysia",
+        "region": "Southeast Asia",
+        "category": "Fashion",
+        "base_url": "https://www.zalora.com.my",
+        "seller_url": "https://sellercenter.zalora.com.my",
+        "login_url": "https://www.zalora.com.my/customer/account/login/",
+        "search_url": "https://www.zalora.com.my/catalog/?q="
+    },
+    "tiki_vn": {
+        "name": "Tiki Vietnam",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://tiki.vn",
+        "seller_url": "https://seller.tiki.vn",
+        "login_url": "https://tiki.vn",
+        "search_url": "https://tiki.vn/search?q="
+    },
+    "sendo_vn": {
+        "name": "Sendo Vietnam",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://www.sendo.vn",
+        "seller_url": "https://ban.sendo.vn",
+        "login_url": "https://ban.sendo.vn/login",
+        "search_url": "https://www.sendo.vn/tim-kiem?q="
+    },
+    "pgmall_my": {
+        "name": "PG Mall Malaysia",
+        "region": "Southeast Asia",
+        "category": "Marketplace",
+        "base_url": "https://pgmall.my",
+        "seller_url": "https://seller.pgmall.my",
+        "login_url": "https://pgmall.my/login",
+        "search_url": "https://pgmall.my/search?search="
+    },
+    "taobao": {
+        "name": "Taobao",
+        "region": "East Asia",
+        "category": "C2C & B2C Marketplace",
+        "base_url": "https://www.taobao.com",
+        "seller_url": "https://myseller.taobao.com",
+        "login_url": "https://login.taobao.com",
+        "search_url": "https://s.taobao.com/search?q="
+    },
+    "tmall": {
+        "name": "Tmall",
+        "region": "East Asia",
+        "category": "B2C Brand Marketplace",
+        "base_url": "https://www.tmall.com",
+        "seller_url": "https://myseller.taobao.com",
+        "login_url": "https://login.tmall.com",
+        "search_url": "https://list.tmall.com/search_product.htm?q="
+    },
+    "jd_com": {
+        "name": "JD.com",
+        "region": "East Asia",
+        "category": "B2C Marketplace",
+        "base_url": "https://www.jd.com",
+        "seller_url": "https://shop.jd.com",
+        "login_url": "https://passport.jd.com/new/login.aspx",
+        "search_url": "https://search.jd.com/Search?keyword="
+    },
+    "pinduoduo": {
+        "name": "Pinduoduo",
+        "region": "East Asia",
+        "category": "Social Commerce",
+        "base_url": "https://www.pinduoduo.com",
+        "seller_url": "https://mms.pinduoduo.com",
+        "login_url": "https://mms.pinduoduo.com/login",
+        "search_url": "https://www.pinduoduo.com"
+    },
+    "aliexpress": {
+        "name": "AliExpress",
+        "region": "Global / East Asia",
+        "category": "Cross-Border B2C",
+        "base_url": "https://www.aliexpress.com",
+        "seller_url": "https://csp.aliexpress.com",
+        "login_url": "https://login.aliexpress.com",
+        "search_url": "https://www.aliexpress.com/w/wholesale-"
+    },
+    "alibaba": {
+        "name": "Alibaba.com",
+        "region": "Global / East Asia",
+        "category": "Global B2B Wholesale",
+        "base_url": "https://www.alibaba.com",
+        "seller_url": "https://i.alibaba.com",
+        "login_url": "https://passport.alibaba.com",
+        "search_url": "https://www.alibaba.com/trade/search?SearchText="
+    },
+    "1688_com": {
+        "name": "1688 Wholesale",
+        "region": "East Asia",
+        "category": "Domestic B2B Wholesale",
+        "base_url": "https://www.1688.com",
+        "seller_url": "https://work.1688.com",
+        "login_url": "https://login.1688.com",
+        "search_url": "https://s.1688.com/selloffer/offer_search.htm?keywords="
+    },
+    "rakuten_jp": {
+        "name": "Rakuten Ichiba Japan",
+        "region": "East Asia",
+        "category": "Marketplace",
+        "base_url": "https://www.rakuten.co.jp",
+        "seller_url": "https://mainmenu.rms.rakuten.co.jp",
+        "login_url": "https://grp01.id.rakuten.co.jp/rms/nid/login",
+        "search_url": "https://search.rakuten.co.jp/search/mall/"
+    },
+    "mercari_jp": {
+        "name": "Mercari Japan",
+        "region": "East Asia",
+        "category": "C2C & Shops",
+        "base_url": "https://jp.mercari.com",
+        "seller_url": "https://mercari-shops.com",
+        "login_url": "https://jp.mercari.com/signin",
+        "search_url": "https://jp.mercari.com/search?keyword="
+    },
+    "yahoo_shopping_jp": {
+        "name": "Yahoo! Japan Shopping",
+        "region": "East Asia",
+        "category": "Marketplace",
+        "base_url": "https://shopping.yahoo.co.jp",
+        "seller_url": "https://pro.store.yahoo.co.jp",
+        "login_url": "https://login.yahoo.co.jp",
+        "search_url": "https://shopping.yahoo.co.jp/search?p="
+    },
+    "zozotown": {
+        "name": "ZOZOTOWN Japan",
+        "region": "East Asia",
+        "category": "Fashion",
+        "base_url": "https://zozo.jp",
+        "seller_url": "https://zozo.jp",
+        "login_url": "https://zozo.jp/_member/login.html",
+        "search_url": "https://zozo.jp/search/?p_keyv="
+    },
+    "coupang_kr": {
+        "name": "Coupang Korea",
+        "region": "East Asia",
+        "category": "Marketplace & Rocket Delivery",
+        "base_url": "https://www.coupang.com",
+        "seller_url": "https://wing.coupang.com",
+        "login_url": "https://login.coupang.com/login/login.pang",
+        "search_url": "https://www.coupang.com/np/search?q="
+    },
+    "gmarket_kr": {
+        "name": "Gmarket Korea",
+        "region": "East Asia",
+        "category": "Marketplace",
+        "base_url": "https://www.gmarket.co.kr",
+        "seller_url": "https://www.esmplus.com",
+        "login_url": "https://signin.gmarket.co.kr/LogIn/LogIn",
+        "search_url": "https://browse.gmarket.co.kr/search?keyword="
+    },
+    "11street_kr": {
+        "name": "11Street Korea",
+        "region": "East Asia",
+        "category": "Marketplace",
+        "base_url": "https://www.11st.co.kr",
+        "seller_url": "https://soffice.11st.co.kr",
+        "login_url": "https://login.11st.co.kr/auth/front/login.tmall",
+        "search_url": "https://search.11st.co.kr/Search.tmall?kwd="
+    },
+    "naver_smartstore": {
+        "name": "Naver SmartStore",
+        "region": "East Asia",
+        "category": "Storefront & Marketplace",
+        "base_url": "https://shopping.naver.com",
+        "seller_url": "https://sell.smartstore.naver.com",
+        "login_url": "https://nid.naver.com/nidlogin.login",
+        "search_url": "https://search.shopping.naver.com/search/all?query="
+    },
+    "ssg_kr": {
+        "name": "SSG.COM Korea",
+        "region": "East Asia",
+        "category": "Department Store & Retail",
+        "base_url": "https://www.ssg.com",
+        "seller_url": "https://po.ssgadm.com",
+        "login_url": "https://member.ssg.com/member/login.ssg",
+        "search_url": "https://www.ssg.com/search.ssg?query="
+    },
+
+    # =========================================================================
+    # 3. GLOBAL, AMERICAS, EUROPE, INDIA & MENA MARKETPLACES (40 Platform)
+    # =========================================================================
+    "amazon_us": {
+        "name": "Amazon US",
+        "region": "North America",
+        "category": "Global Marketplace",
+        "base_url": "https://www.amazon.com",
+        "seller_url": "https://sellercentral.amazon.com",
+        "login_url": "https://sellercentral.amazon.com/ap/signin",
+        "search_url": "https://www.amazon.com/s?k="
+    },
+    "amazon_uk": {
+        "name": "Amazon UK",
+        "region": "Europe",
+        "category": "Global Marketplace",
+        "base_url": "https://www.amazon.co.uk",
+        "seller_url": "https://sellercentral.amazon.co.uk",
+        "login_url": "https://sellercentral.amazon.co.uk/ap/signin",
+        "search_url": "https://www.amazon.co.uk/s?k="
+    },
+    "amazon_de": {
+        "name": "Amazon Germany",
+        "region": "Europe",
+        "category": "Global Marketplace",
+        "base_url": "https://www.amazon.de",
+        "seller_url": "https://sellercentral.amazon.de",
+        "login_url": "https://sellercentral.amazon.de/ap/signin",
+        "search_url": "https://www.amazon.de/s?k="
+    },
+    "amazon_jp": {
+        "name": "Amazon Japan",
+        "region": "East Asia",
+        "category": "Global Marketplace",
+        "base_url": "https://www.amazon.co.jp",
+        "seller_url": "https://sellercentral.amazon.co.jp",
+        "login_url": "https://sellercentral.amazon.co.jp/ap/signin",
+        "search_url": "https://www.amazon.co.jp/s?k="
+    },
+    "amazon_sg": {
+        "name": "Amazon Singapore",
+        "region": "Southeast Asia",
+        "category": "Global Marketplace",
+        "base_url": "https://www.amazon.sg",
+        "seller_url": "https://sellercentral.amazon.sg",
+        "login_url": "https://sellercentral.amazon.sg/ap/signin",
+        "search_url": "https://www.amazon.sg/s?k="
+    },
+    "ebay": {
+        "name": "eBay Global",
+        "region": "Global",
+        "category": "Auction & Marketplace",
+        "base_url": "https://www.ebay.com",
+        "seller_url": "https://www.ebay.com/sh/ovw",
+        "login_url": "https://signin.ebay.com",
+        "search_url": "https://www.ebay.com/sch/i.html?_nkw="
+    },
+    "walmart_us": {
+        "name": "Walmart Marketplace",
+        "region": "North America",
+        "category": "Retail & Marketplace",
+        "base_url": "https://www.walmart.com",
+        "seller_url": "https://seller.walmart.com",
+        "login_url": "https://seller.walmart.com/login",
+        "search_url": "https://www.walmart.com/search?q="
+    },
+    "target_plus": {
+        "name": "Target Plus",
+        "region": "North America",
+        "category": "Retail & Marketplace",
+        "base_url": "https://www.target.com",
+        "seller_url": "https://plus.target.com",
+        "login_url": "https://www.target.com/login",
+        "search_url": "https://www.target.com/s?searchTerm="
+    },
+    "bestbuy": {
+        "name": "Best Buy Marketplace",
+        "region": "North America",
+        "category": "Electronics",
+        "base_url": "https://www.bestbuy.com",
+        "seller_url": "https://www.bestbuy.com",
+        "login_url": "https://www.bestbuy.com/identity/global/signin",
+        "search_url": "https://www.bestbuy.com/site/searchpage.jsp?st="
+    },
+    "etsy": {
+        "name": "Etsy",
+        "region": "Global",
+        "category": "Handmade, Vintage & Crafts",
+        "base_url": "https://www.etsy.com",
+        "seller_url": "https://www.etsy.com/your/shops/me/dashboard",
+        "login_url": "https://www.etsy.com/signin",
+        "search_url": "https://www.etsy.com/search?q="
+    },
+    "wayfair": {
+        "name": "Wayfair Partner Home",
+        "region": "North America / Europe",
+        "category": "Furniture & Home",
+        "base_url": "https://www.wayfair.com",
+        "seller_url": "https://partners.wayfair.com",
+        "login_url": "https://partners.wayfair.com",
+        "search_url": "https://www.wayfair.com/keyword.php?keyword="
+    },
+    "newegg": {
+        "name": "Newegg Seller Portal",
+        "region": "North America",
+        "category": "PC Hardware & Tech",
+        "base_url": "https://www.newegg.com",
+        "seller_url": "https://sellerportal.newegg.com",
+        "login_url": "https://sellerportal.newegg.com",
+        "search_url": "https://www.newegg.com/p/pl?d="
+    },
+    "temu": {
+        "name": "Temu Seller Center",
+        "region": "Global",
+        "category": "Cross-Border Marketplace",
+        "base_url": "https://www.temu.com",
+        "seller_url": "https://seller.temu.com",
+        "login_url": "https://seller.temu.com/login",
+        "search_url": "https://www.temu.com/search_result.html?search_key="
+    },
+    "shein": {
+        "name": "SHEIN Marketplace",
+        "region": "Global",
+        "category": "Fast Fashion & Lifestyle",
+        "base_url": "https://www.shein.com",
+        "seller_url": "https://sso.geiwohuo.com",
+        "login_url": "https://www.shein.com/user/auth/login",
+        "search_url": "https://www.shein.com/pdsearch/"
+    },
+    "wish": {
+        "name": "Wish Merchant",
+        "region": "Global",
+        "category": "Marketplace",
+        "base_url": "https://www.wish.com",
+        "seller_url": "https://merchant.wish.com",
+        "login_url": "https://merchant.wish.com/login",
+        "search_url": "https://www.wish.com/search/"
+    },
+    "overstock": {
+        "name": "Beyond / Overstock",
+        "region": "North America",
+        "category": "Home & Decor",
+        "base_url": "https://www.overstock.com",
+        "seller_url": "https://supplier.overstock.com",
+        "login_url": "https://supplier.overstock.com",
+        "search_url": "https://www.overstock.com/search?keywords="
+    },
+    "poshmark": {
+        "name": "Poshmark",
+        "region": "North America",
+        "category": "Social Fashion Resale",
+        "base_url": "https://poshmark.com",
+        "seller_url": "https://poshmark.com/Closet",
+        "login_url": "https://poshmark.com/login",
+        "search_url": "https://poshmark.com/search?query="
+    },
+    "depop": {
+        "name": "Depop",
+        "region": "Global",
+        "category": "Fashion Resale",
+        "base_url": "https://www.depop.com",
+        "seller_url": "https://www.depop.com/products/create/",
+        "login_url": "https://www.depop.com/login/",
+        "search_url": "https://www.depop.com/search/?q="
+    },
+    "stockx": {
+        "name": "StockX",
+        "region": "Global",
+        "category": "Sneakers, Streetwear & Collectibles",
+        "base_url": "https://stockx.com",
+        "seller_url": "https://pro.stockx.com",
+        "login_url": "https://stockx.com/login",
+        "search_url": "https://stockx.com/search?s="
+    },
+    "goat": {
+        "name": "GOAT",
+        "region": "Global",
+        "category": "Sneakers & Apparel",
+        "base_url": "https://www.goat.com",
+        "seller_url": "https://alias.org",
+        "login_url": "https://www.goat.com/account/login",
+        "search_url": "https://www.goat.com/search?query="
+    },
+    "flipkart": {
+        "name": "Flipkart India",
+        "region": "South Asia",
+        "category": "Marketplace",
+        "base_url": "https://www.flipkart.com",
+        "seller_url": "https://seller.flipkart.com",
+        "login_url": "https://seller.flipkart.com",
+        "search_url": "https://www.flipkart.com/search?q="
+    },
+    "myntra": {
+        "name": "Myntra India",
+        "region": "South Asia",
+        "category": "Fashion",
+        "base_url": "https://www.myntra.com",
+        "seller_url": "https://partners.myntrainfo.com",
+        "login_url": "https://www.myntra.com/login",
+        "search_url": "https://www.myntra.com/"
+    },
+    "meesho": {
+        "name": "Meesho India",
+        "region": "South Asia",
+        "category": "Social Commerce",
+        "base_url": "https://www.meesho.com",
+        "seller_url": "https://supplier.meesho.com",
+        "login_url": "https://supplier.meesho.com/panel/v3/new/root/login",
+        "search_url": "https://www.meesho.com/search?q="
+    },
+    "nykaa": {
+        "name": "Nykaa",
+        "region": "South Asia",
+        "category": "Beauty & Wellness",
+        "base_url": "https://www.nykaa.com",
+        "seller_url": "https://www.nykaa.com/sell-on-nykaa",
+        "login_url": "https://www.nykaa.com",
+        "search_url": "https://www.nykaa.com/search/result/?q="
+    },
+    "indiamart": {
+        "name": "IndiaMART",
+        "region": "South Asia",
+        "category": "B2B Wholesale",
+        "base_url": "https://www.indiamart.com",
+        "seller_url": "https://seller.indiamart.com",
+        "login_url": "https://seller.indiamart.com",
+        "search_url": "https://dir.indiamart.com/search.mp?ss="
+    },
+    "zalando": {
+        "name": "Zalando Partner Program",
+        "region": "Europe",
+        "category": "Fashion & Lifestyle",
+        "base_url": "https://www.zalando.com",
+        "seller_url": "https://zdirect.zalando.com",
+        "login_url": "https://zdirect.zalando.com",
+        "search_url": "https://www.zalando.co.uk/catalog/?q="
+    },
+    "asos": {
+        "name": "ASOS Marketplace",
+        "region": "Europe / Global",
+        "category": "Fashion",
+        "base_url": "https://www.asos.com",
+        "seller_url": "https://marketplace.asos.com/my/boutique",
+        "login_url": "https://my.asos.com",
+        "search_url": "https://www.asos.com/search/?q="
+    },
+    "otto_de": {
+        "name": "OTTO Market Germany",
+        "region": "Europe",
+        "category": "Marketplace",
+        "base_url": "https://www.otto.de",
+        "seller_url": "https://portal.otto.market",
+        "login_url": "https://portal.otto.market",
+        "search_url": "https://www.otto.de/suche/"
+    },
+    "bol_com": {
+        "name": "Bol.com Netherlands & Belgium",
+        "region": "Europe",
+        "category": "Marketplace",
+        "base_url": "https://www.bol.com",
+        "seller_url": "https://partner.bol.com",
+        "login_url": "https://partner.bol.com",
+        "search_url": "https://www.bol.com/nl/nl/s/?searchtext="
+    },
+    "cdiscount": {
+        "name": "Cdiscount France",
+        "region": "Europe",
+        "category": "Marketplace",
+        "base_url": "https://www.cdiscount.com",
+        "seller_url": "https://seller.cdiscount.com",
+        "login_url": "https://seller.cdiscount.com",
+        "search_url": "https://www.cdiscount.com/search/10/"
+    },
+    "fnac": {
+        "name": "Fnac Darty Marketplace",
+        "region": "Europe",
+        "category": "Electronics & Culture",
+        "base_url": "https://www.fnac.com",
+        "seller_url": "https://mp.fnac.com",
+        "login_url": "https://mp.fnac.com/compte/login",
+        "search_url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search="
+    },
+    "allegro_pl": {
+        "name": "Allegro Poland",
+        "region": "Europe",
+        "category": "Marketplace",
+        "base_url": "https://allegro.pl",
+        "seller_url": "https://salescenter.allegro.com",
+        "login_url": "https://allegro.pl/logowanie",
+        "search_url": "https://allegro.pl/listing?string="
+    },
+    "trendyol": {
+        "name": "Trendyol Turkey",
+        "region": "Europe / MENA",
+        "category": "Marketplace",
+        "base_url": "https://www.trendyol.com",
+        "seller_url": "https://partner.trendyol.com",
+        "login_url": "https://partner.trendyol.com/account/login",
+        "search_url": "https://www.trendyol.com/sr?q="
+    },
+    "hepsiburada": {
+        "name": "Hepsiburada Turkey",
+        "region": "Europe / MENA",
+        "category": "Marketplace",
+        "base_url": "https://www.hepsiburada.com",
+        "seller_url": "https://merchant.hepsiburada.com",
+        "login_url": "https://merchant.hepsiburada.com",
+        "search_url": "https://www.hepsiburada.com/ara?q="
+    },
+    "ozon_ru": {
+        "name": "Ozon Seller",
+        "region": "Eastern Europe",
+        "category": "Marketplace",
+        "base_url": "https://www.ozon.ru",
+        "seller_url": "https://seller.ozon.ru",
+        "login_url": "https://seller.ozon.ru",
+        "search_url": "https://www.ozon.ru/search/?text="
+    },
+    "wildberries": {
+        "name": "Wildberries Seller",
+        "region": "Eastern Europe",
+        "category": "Marketplace",
+        "base_url": "https://www.wildberries.ru",
+        "seller_url": "https://seller.wildberries.ru",
+        "login_url": "https://seller.wildberries.ru",
+        "search_url": "https://www.wildberries.ru/catalog/0/search.aspx?search="
+    },
+    "noon_mena": {
+        "name": "Noon UAE & KSA",
+        "region": "Middle East (MENA)",
+        "category": "Marketplace",
+        "base_url": "https://www.noon.com",
+        "seller_url": "https://login.noon.partners",
+        "login_url": "https://login.noon.partners",
+        "search_url": "https://www.noon.com/uae-en/search/?q="
+    },
+    "jumia": {
+        "name": "Jumia Africa",
+        "region": "Africa",
+        "category": "Marketplace",
+        "base_url": "https://www.jumia.com.ng",
+        "seller_url": "https://vendorcenter.jumia.com",
+        "login_url": "https://vendorcenter.jumia.com",
+        "search_url": "https://www.jumia.com.ng/catalog/?q="
+    },
+    "mercadolibre": {
+        "name": "Mercado Libre LatAm",
+        "region": "Latin America",
+        "category": "Marketplace",
+        "base_url": "https://www.mercadolivre.com.br",
+        "seller_url": "https://www.mercadolivre.com.br/vendas",
+        "login_url": "https://www.mercadolivre.com/jms/mlb/lgz/login",
+        "search_url": "https://lista.mercadolivre.com.br/"
+    },
+    "magalu_br": {
+        "name": "Magazine Luiza (Magalu)",
+        "region": "Latin America",
+        "category": "Marketplace",
+        "base_url": "https://www.magazineluiza.com.br",
+        "seller_url": "https://universomagalu.com.br",
+        "login_url": "https://sacola.magazineluiza.com.br/#/login",
+        "search_url": "https://www.magazineluiza.com.br/busca/"
+    },
+
+    # =========================================================================
+    # 4. E-COMMERCE STOREFRONT, OMNICHANNEL & SOCIAL ENGINES (20 Platform)
+    # =========================================================================
+    "shopify": {
+        "name": "Shopify Admin",
+        "region": "Global",
+        "category": "Storefront CMS",
+        "base_url": "https://www.shopify.com",
+        "seller_url": "https://admin.shopify.com",
+        "login_url": "https://accounts.shopify.com/lookup",
+        "search_url": "https://www.shopify.com"
+    },
+    "woocommerce": {
+        "name": "WooCommerce (WordPress)",
+        "region": "Global",
+        "category": "Storefront CMS",
+        "base_url": "https://woocommerce.com",
+        "seller_url": "https://woocommerce.com/my-dashboard",
+        "login_url": "https://woocommerce.com/log-in",
+        "search_url": "https://woocommerce.com"
+    },
+    "magento": {
+        "name": "Adobe Commerce (Magento)",
+        "region": "Global",
+        "category": "Enterprise Storefront",
+        "base_url": "https://business.adobe.com/products/magento/magento-commerce.html",
+        "seller_url": "https://account.magento.com",
+        "login_url": "https://account.magento.com/customer/account/login",
+        "search_url": "https://commercemarketplace.adobe.com"
+    },
+    "bigcommerce": {
+        "name": "BigCommerce",
+        "region": "Global",
+        "category": "Storefront CMS",
+        "base_url": "https://www.bigcommerce.com",
+        "seller_url": "https://login.bigcommerce.com",
+        "login_url": "https://login.bigcommerce.com/login",
+        "search_url": "https://www.bigcommerce.com"
+    },
+    "prestashop": {
+        "name": "PrestaShop",
+        "region": "Global",
+        "category": "Storefront CMS",
+        "base_url": "https://prestashop.com",
+        "seller_url": "https://addons.prestashop.com",
+        "login_url": "https://authv2.prestashop.com/login",
+        "search_url": "https://addons.prestashop.com/en/search?search_query="
+    },
+    "opencart": {
+        "name": "OpenCart",
+        "region": "Global",
+        "category": "Storefront CMS",
+        "base_url": "https://www.opencart.com",
+        "seller_url": "https://www.opencart.com/index.php?route=account/account",
+        "login_url": "https://www.opencart.com/index.php?route=account/login",
+        "search_url": "https://www.opencart.com/index.php?route=marketplace/extension&filter_search="
+    },
+    "wix_ecommerce": {
+        "name": "Wix eCommerce",
+        "region": "Global",
+        "category": "Storefront Builder",
+        "base_url": "https://www.wix.com/ecommerce/website",
+        "seller_url": "https://manage.wix.com",
+        "login_url": "https://users.wix.com/signin",
+        "search_url": "https://www.wix.com"
+    },
+    "squarespace": {
+        "name": "Squarespace Commerce",
+        "region": "Global",
+        "category": "Storefront Builder",
+        "base_url": "https://www.squarespace.com/ecommerce-website",
+        "seller_url": "https://account.squarespace.com",
+        "login_url": "https://login.squarespace.com",
+        "search_url": "https://www.squarespace.com"
+    },
+    "ecwid": {
+        "name": "Ecwid by Lightspeed",
+        "region": "Global",
+        "category": "Storefront Widget",
+        "base_url": "https://www.ecwid.com",
+        "seller_url": "https://my.ecwid.com",
+        "login_url": "https://my.ecwid.com/cp/#login",
+        "search_url": "https://www.ecwid.com"
+    },
+    "sirclo": {
+        "name": "SIRCLO Store & Connexi",
+        "region": "Indonesia",
+        "category": "Omnichannel Enabler",
+        "base_url": "https://www.sirclo.com",
+        "seller_url": "https://panel.sirclo.com",
+        "login_url": "https://panel.sirclo.com/login",
+        "search_url": "https://www.sirclo.com"
+    },
+    "desty": {
+        "name": "Desty Omni & Store",
+        "region": "Indonesia",
+        "category": "Omnichannel & Social Link",
+        "base_url": "https://www.desty.app",
+        "seller_url": "https://omni.desty.app",
+        "login_url": "https://omni.desty.app/login",
+        "search_url": "https://www.desty.app"
+    },
+    "jubelio": {
+        "name": "Jubelio Omnichannel",
+        "region": "Indonesia",
+        "category": "Omnichannel ERP & WMS",
+        "base_url": "https://jubelio.com",
+        "seller_url": "https://app2.jubelio.com",
+        "login_url": "https://app2.jubelio.com/login",
+        "search_url": "https://jubelio.com"
+    },
+    "plugo": {
+        "name": "Plugo Indonesia",
+        "region": "Indonesia",
+        "category": "D2C Storefront & Omnichannel",
+        "base_url": "https://www.plugo.world",
+        "seller_url": "https://admin.plugo.world",
+        "login_url": "https://admin.plugo.world/login",
+        "search_url": "https://www.plugo.world"
+    },
+    "orderonline": {
+        "name": "OrderOnline.id",
+        "region": "Indonesia",
+        "category": "Social Commerce & Funnel",
+        "base_url": "https://orderonline.id",
+        "seller_url": "https://app.orderonline.id",
+        "login_url": "https://app.orderonline.id/login",
+        "search_url": "https://orderonline.id"
+    },
+    "evermos": {
+        "name": "Evermos Social Reseller",
+        "region": "Indonesia",
+        "category": "Social Commerce & Reseller",
+        "base_url": "https://evermos.com",
+        "seller_url": "https://evermos.com/home",
+        "login_url": "https://evermos.com/login",
+        "search_url": "https://evermos.com/catalog?q="
+    },
+    "whatsapp_business": {
+        "name": "WhatsApp Business Catalog",
+        "region": "Global",
+        "category": "Conversational Commerce",
+        "base_url": "https://business.whatsapp.com",
+        "seller_url": "https://web.whatsapp.com",
+        "login_url": "https://web.whatsapp.com",
+        "search_url": "https://business.whatsapp.com"
+    },
+    "meta_commerce": {
+        "name": "Meta Commerce Manager (IG & FB Shop)",
+        "region": "Global",
+        "category": "Social Commerce",
+        "base_url": "https://www.facebook.com/commerce_manager",
+        "seller_url": "https://www.facebook.com/commerce_manager",
+        "login_url": "https://www.facebook.com/login",
+        "search_url": "https://www.facebook.com/marketplace/search/?query="
+    },
+    "pinterest_shop": {
+        "name": "Pinterest Business & Catalogs",
+        "region": "Global",
+        "category": "Visual Social Commerce",
+        "base_url": "https://business.pinterest.com",
+        "seller_url": "https://www.pinterest.com/business/hub/",
+        "login_url": "https://www.pinterest.com/login/",
+        "search_url": "https://www.pinterest.com/search/pins/?q="
+    },
+    "youtube_shopping": {
+        "name": "YouTube Shopping Affiliate & Store",
+        "region": "Global",
+        "category": "Video Commerce",
+        "base_url": "https://studio.youtube.com",
+        "seller_url": "https://studio.youtube.com",
+        "login_url": "https://accounts.google.com",
+        "search_url": "https://www.youtube.com/results?search_query="
+    },
+    "line_shopping": {
+        "name": "LINE MyShop / Shopping",
+        "region": "East & Southeast Asia",
+        "category": "Conversational Commerce",
+        "base_url": "https://lineshopping.me",
+        "seller_url": "https://oaplus.line.biz",
+        "login_url": "https://account.line.biz/login",
+        "search_url": "https://shop.line.me/search?query="
+    }
+}
+
+# Alias kompatibilitas untuk kode lama ("shopee" -> "shopee_id")
+PLATFORM_ALIASES = {
+    "shopee": "shopee_id",
+    "tiktok": "tiktok_shop_id",
+    "lazada": "lazada_id",
+    "zalora": "zalora_id",
+    "gojek": "gofood_gobiz",
+    "amazon": "amazon_us"
+}
+
+
+def get_platform_info(platform_key: str) -> Optional[Dict[str, str]]:
+    """Ambil metadata lengkap sebuah platform berdasarkan kode ID atau alias."""
+    key = platform_key.strip().lower()
+    key = PLATFORM_ALIASES.get(key, key)
+    return PLATFORM_REGISTRY.get(key)
+
+
+def list_all_platforms(region: Optional[str] = None, category: Optional[str] = None) -> List[Dict[str, str]]:
+    """Daftar seluruh 125+ platform e-commerce, opsional difilter per region atau kategori."""
+    results = []
+    for pid, meta in PLATFORM_REGISTRY.items():
+        item = {"id": pid, **meta}
+        if region and region.lower() not in meta["region"].lower():
+            continue
+        if category and category.lower() not in meta["category"].lower():
+            continue
+        results.append(item)
+    return results
+
+
+def get_platform_summary_by_region() -> Dict[str, int]:
+    """Hitung jumlah platform yang terdaftar per region."""
+    counts: Dict[str, int] = {}
+    for meta in PLATFORM_REGISTRY.values():
+        reg = meta["region"]
+        counts[reg] = counts.get(reg, 0) + 1
+    return counts
